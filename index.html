@@ -3,14 +3,23 @@
 <head>
   <meta charset="utf-8">
   <title>A Simple Javscript Quiz, testing lolcommits flash issues</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="script.js"></script>
 </head>
 <body>
-  <div id="container">
+  <div class="container">
     <header>
       <h1>A Simple Javascript Quiz</h1>
       <p>See how well you know these <strong>JS fundamentals</strong></p>
+    <span class="glyphicon glyphicon-volume-off"></span>
+    <span class="glyphicon glyphicon-volume-up"></span>
+    <div class="progress">
+  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+    <span class="sr-only"></span>
+  </div>
+</div>
     </header>
     <section>
       <div id="results"></div>
@@ -50,6 +59,9 @@
       </form>
     </section>
     <footer>
+      <audio class="audio" autoplay loop>
+        <source src="Jeopardy-theme-song.mp3">
+      </audio>
       <a href="https://github.com/robhaj">github</a>
       <p>Simple JS Quiz/Form BoilerPlate for JS/Jquery. &copy;2015</p>
     </footer>
