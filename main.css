@@ -4,13 +4,6 @@ body {
   font-family:sans-serif;
   font-size:14px;
 }
-#container {
-  width: 60%;
-  background:#199fdb;
-  margin: 20px auto;
-  overflow: auto;
-  padding: 25px;
-}
 header {
   text-align: center;
   border-bottom: #fff dashed 2px;
@@ -27,15 +20,23 @@ p {
 section {
   min-height:400px;
 }
-footer {
-  text-align: center;
-}
 input[type='submit'] {
   background: #f06226;
   border: 0;
   color:#fff;
   padding:10px 15px;
   cursor: pointer;
+}
+footer {
+  text-align: center;
+}
+
+.container {
+  width: 60%;
+  background:#199fdb;
+  margin: 20px auto;
+  overflow: auto;
+  padding: 25px;
 }
 #results h3 {
   background:#f06226;
