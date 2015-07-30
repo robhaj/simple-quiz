@@ -5,8 +5,6 @@
   <title>A Simple Javscript Quiz, testing lolcommits flash issues</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="script.js"></script>
 </head>
 <body>
   <div class="container">
@@ -15,11 +13,6 @@
       <p>See how well you know these <strong>JS fundamentals</strong></p>
     <span class="glyphicon glyphicon-volume-off"></span>
     <span class="glyphicon glyphicon-volume-up"></span>
-    <div class="progress">
-  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-    <span class="sr-only"></span>
-  </div>
-</div>
     </header>
     <section>
       <div id="results"></div>
@@ -28,7 +21,7 @@
         <input type="radio" name="q1" value="a" id="q1a">a. Arrays<br>
         <input type="radio" name="q1" value="b" id="q1b">b. Boolean<br>
         <input type="radio" name="q1" value="c" id="q1c">c. Integers<br>
-        <input type="radio" name="q1" value="d" id="q1c">d. Strings<br>
+        <input type="radio" name="q1" value="d" id="q1d">d. Strings<br>
         <h3>2. Which of the following is not a Data Type?</h3>
         <input type="radio" name="q2" value="a" id="q2a">a. Strings<br>
         <input type="radio" name="q2" value="b" id="q2b">b. Arrays<br>
@@ -59,12 +52,19 @@
       </form>
     </section>
     <footer>
-      <audio class="audio" autoplay loop>
+      <audio class="audio" loop>
         <source src="Jeopardy-theme-song.mp3">
       </audio>
+      <div class="progress">
+    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+      <span class="sr-only"></span>
+    </div>
+  </div>
       <a href="https://github.com/robhaj">github</a>
       <p>Simple JS Quiz/Form BoilerPlate for JS/Jquery. &copy;2015</p>
     </footer>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
