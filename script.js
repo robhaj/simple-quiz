@@ -22,12 +22,14 @@ function appendQuestions() {
   var k = 0;
   for (var l = 0; l < questions.length; l++) {
     createQuestion(questions[l].q);
-    for (var i = 0; i < questions[i].answers.length; i++ ) {
-      createAnswers(i+"a"+l,questions[i].answers[k], l);
+
+    for (var i = 0; i < 4; i++ ) {
+      createAnswers(i+"a"+l,questions[l].answers[k], l);
       k++;
     }
     k=0;
   }
+
 }
 
 // progress bar dynamics
