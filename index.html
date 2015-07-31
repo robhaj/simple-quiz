@@ -15,9 +15,10 @@
     <span class="glyphicon glyphicon-volume-up"></span>
     </header>
       <div id="results"></div>
-      <form name="quizForm" onsubmit="return submitAnswers()">
-        <section class="qst1">
+      <form name="quizForm">
+        <section class="qst">
         </section>
+        <br><br>
         <input type=submit value="Submit Answers">
       </form>
     </section>
@@ -37,11 +38,4 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="objects.js"></script>
   <script src="script.js"></script>
-  <script type='text/javscript'>
-  var i = 0;
-while (i < 4) {
-  createAnswers(answers[i].name, answers[i].value, answers[i].id, answers[i].ans);
-  i++;
-}</script>
-</body>
 </html>
