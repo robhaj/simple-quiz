@@ -19,19 +19,24 @@ function createAnswers(id, answer, name){
 
 //display all questions/answers in objects.js
 function appendQuestions() {
+
+  $('.simple').append("<h1>A Simple Javascript Quiz</h1>");
+  $('.simple').append("<p>See how well you know these <strong>JS fundamentals</strong></p>");
+
   var k = 0;
   for (var l = 0; l < questions.length; l++) {
     createQuestion(questions[l].q);
 
-    for (var i = 0; i < 4; i++ ) {
-      createAnswers(i+"a"+l,questions[l].answers[k], l);
+    for (var i = 0; i < questions[l].answers.length; i++ ) {
+      createAnswers(questions[l].answers[k], questions[l].answers[k], l);
       k++;
     }
     k=0;
   }
-
+  $(document).prop('title', 'A Simple Javscript Quiz');
+  $('#gitHub').append('<a href="https://github.com/robhaj">github</a>');
+  $('#gitHub').append('<p>Simple JS Quiz/Form BoilerPlate for JS/Jquery. &copy;2015</p>');
 }
-
 // progress bar dynamics
 function progBar(){
   $('input').on('change', function(){
@@ -42,6 +47,7 @@ function progBar(){
 }
 
 function audioEvents() {
+
   //audio off button event
   $('.glyphicon-volume-off').on('click', function(){
     $('.audio').prop("volume", 0);});
@@ -60,23 +66,20 @@ function submitAnswers() {
   var total = questions.length;
   var score = 0;
   var checked = $('input:checked');
-  var akey = [questions[0].correct, questions[1].correct, questions[2].correct, questions[3].correct, questions[4].correct, questions[5].correct, questions[6].correct, questions[7].correct, questions[8].correct, questions[9].correct];
+
+  // validation
+  if (checked.length < total){
+    alert("You missed a question");
+    return 1;
+  }
 
   //check answers and calculate score
   for (var i=0; i<total; i++) {
-    if (akey[i]===checked[i].value) {
-      score++;
-    }
+    if (questions[i].correct===checked[i].value)
+    score++;
   }
 
   //output
   $('#results').html('<h3>You scored ' +score+ ' out of ' +total+ '</h3>');
   alert("You scored " +score+ " out of " +total);
 }
-
-//validation
-// for (j=1; j<=total; j++ ) {
-//   if (checked[j-1]) {
-//     alert("You missed question " + j);
-//     return 1;
-// }}
