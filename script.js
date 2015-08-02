@@ -77,6 +77,8 @@ $(document).ready(function(){
 
     //check answers and calculate score
     for (var i=0; i<total; i++) {
+      console.log(questions[i].correct);
+      console.log(checked[i].value);
       if (questions[i].correct===checked[i].value)
       score++;
     }
